@@ -1,0 +1,10 @@
+- var pages = public.structure.pages
+- var pagesData = {}
+- for (var folder in pages) {
+- 	if(typeof pages[folder]._data !== 'undefined') {
+- 		var page = pages[folder]
+-   	var pageData = page._data
+- 		pageData.order = folder.split('_')[0]
+-   	pagesData[folder.split('_')[1]] = pageData
+- 	}
+- }

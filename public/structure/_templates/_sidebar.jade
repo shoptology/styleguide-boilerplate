@@ -1,0 +1,12 @@
+include ../_includes/pagesData
+.shop-sidebar
+  .shop-sidebar__toggle--out
+    a(href='#') Menu
+  .shop-sidebar__content
+    .shop-sidebar__toggle--in
+      a(href='#') Menu
+    nav.shop-sidebar__nav.row.clearfix
+      ul.shop-list--unstyled
+        each page in public.structure.pages._data.items
+          li.shop-sidebar__nav__item
+            a(href="##{page.id}", data-link="#{page.id}").shop-sidebar__nav__item__link.shop-anchor=page.name

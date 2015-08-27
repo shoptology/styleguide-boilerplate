@@ -1,0 +1,37 @@
+{
+  "clientName": "",
+  "language": "en_US",
+  "logoImage": "logo_placeholder.png",
+  "defaultPage": "introduction",
+  "breakpoints": [
+    {
+      "id": "small",
+      "name": "Small",
+      "size": "420px"
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "size": "720px"
+    },
+    {
+      "id": "full",
+      "name": "Full",
+      "size": "100%"
+    }
+  ],
+  "translations": {
+    "pt_BR": {
+      "begining": "Início",
+      "styleguide": "Styleguide"
+    },
+    "en_US": {
+      "begining": "Beginning",
+      "styleguide": "Styleguide"
+    },
+    "es_CO": {
+      "begining": "Inicio",
+      "styleguide": "Styleguide"
+    }
+  }
+}

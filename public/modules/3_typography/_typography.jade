@@ -1,0 +1,12 @@
+h2.shop-module__title=name
+if items.intro
+	each paragraph in items.intro
+		p.shop-module__paragraph!=paragraph
+.titles
+	each font in items.fonts
+		- var heading = '<h' + font.heading + ' class="' + font.className + '">' + font.title + '</h' + font.heading + '>'
+		h4.shop-module__title--light #{font.fontName} - #{font.fontSize} !{heading}
+br
+h5.shop-module__title--small=items.paragraphsName
+each paragraph in items.paragraphs
+	p(class=paragraph.className)=paragraph.text

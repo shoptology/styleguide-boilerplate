@@ -1,0 +1,14 @@
+- var breakpoints = public._data.breakpoints
+
+html
+	body
+		header.shop-header
+			.shop-header__welcome.left
+				span.title Introduction
+				span.subtitle 
+			nav.shop-header__breakpoints.right
+				ul.shop-list--unstyled.shop-list--float
+					each breakpoint in breakpoints
+						li.shop-header__breakpoints__item
+							a(id=breakpoint.id, data-size=breakpoint.size, data-size-label=breakpoint.id).shop-header__breakpoints__item__link
+								span=breakpoint.name
