@@ -1,0 +1,99 @@
+/* To add more icons just copy these three lines */
+
+.icon-tomato,
+.icon-left-tomato:before,
+.icon-right-tomato:after {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/131442/tomato.svg);
+}
+
+/* Generic icon stuff */
+
+.icon,
+[class*="icon-right-"]:after,
+[class*="icon-left-"]:before {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 32px;
+    height: 32px;
+}
+
+/*
+ *  If you're not supporting ie8 you can use `[class*="icon-"]:not([class*="icon-left"]):not([class*="icon-right"])` 
+ *  rather than `.icon` in the block above. It's a little longer but it means you don't need to use an extra "icon" 
+ *  class name for inline icons. Don't forget to replace this in the size modifiers as well.
+ */
+
+[class*="icon-left-"] {
+    position: relative;
+    padding-left: 52px !important;
+}
+
+[class*="icon-right-"] {
+    position: relative;
+    padding-right: 52px !important;
+}
+
+[class*="icon-left-"]:before,
+[class*="icon-right-"]:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+[class*="icon-left-"]:before {
+    left: 10px;
+}
+
+[class*="icon-right-"]:after {
+    right: 10px;
+}
+
+/* Icon size modifiers */
+
+.icon.icon-small,
+.icon-small:before,
+.icon-small:after {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-small[class*="icon-left-"] {
+    padding-left: 27px !important;
+}
+
+.icon-small[class*="icon-left-"]:before {
+    left: 5px;
+}
+
+.icon-small[class*="icon-right-"] {
+    padding-right: 27px !important;
+}
+
+.icon-small[class*="icon-right-"]:after {
+    right: 5px;
+}
+
+.icon.icon-large,
+.icon-large:before,
+.icon-large:after {
+    width: 64px;
+    height: 64px;
+}
+
+.icon-large[class*="icon-left-"] {
+    padding-left: 94px !important;
+}
+
+.icon-large[class*="icon-left-"]:before {
+    left: 15px;
+}
+
+.icon-large[class*="icon-right-"] {
+    padding-right: 94px !important;
+}
+
+.icon-large[class*="icon-right-"]:after {
+    right: 15px;
+}

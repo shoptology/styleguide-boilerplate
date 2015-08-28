@@ -1,0 +1,14 @@
+- var modules = public.modules[cat]
+- var modulesData = {}
+- for (var folder in modules) {
+- 	if(typeof modules[folder]._data !== 'undefined') {
+- 		var module = modules[folder]
+-   	var moduleData = module._data
+- 		moduleData.order = folder.split('_')[0]
+-   	modulesData[folder.split('_')[1]] = moduleData
+- 	}
+- }
+
+ul
+	each module in modulesData
+		li(id=module.id, class="shop-subnav-item") #{module.name}
