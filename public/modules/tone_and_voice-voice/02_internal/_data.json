@@ -1,6 +1,6 @@
 {
     "id": "internal",
-    "name": "Internal Voice",
+    "name": "Internal voice",
     "hasScript": "yes",
     "items" : {
         "do" : [

@@ -8,7 +8,8 @@
 -   	modulesData[folder.split('_')[1]] = moduleData
 - 	}
 - }
-
+	
 ul
 	each module in modulesData
-		li(id=module.id, class="shop-subnav-item") #{module.name}
+		li
+			a(data-scrolltarget='#' + module.id id=module.id + "-link", class="shop-subnav-item") #{module.name}
