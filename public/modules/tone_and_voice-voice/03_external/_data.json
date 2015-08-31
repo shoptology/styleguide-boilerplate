@@ -1,0 +1,8 @@
+{
+    "id": "external",
+    "name": "External voice",
+    "hasScript": "yes",
+    "items" : {
+        "introText" : "This section will cover the voice of our brand..."
+    }
+}

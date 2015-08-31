@@ -30,11 +30,34 @@
     position: relative;
     top: -9px;
 
-    ul {
-        display: none;
+    .icon {
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        position: absolute;
+        right: -10px;
+        top: 2px;
+        @media #{$bp-small} {
+            display: none;
+        }
+    }
 
-        @media #{$bp-large} {
+    ul {
+        width: 122px;
+        display: block;
+        margin-top: 59px;
+        position: absolute;
+        margin-left: -93px;
+
+        @media #{$bp-small} {
             display: block;
+        }
+        li {
+            display: none;
+            padding: 10px;
+            background: white;
+            border-bottom: 1px solid #cacaca;
         }
     }
 }

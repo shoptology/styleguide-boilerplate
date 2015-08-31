@@ -1,0 +1,15 @@
+{
+    "id": "internal",
+    "name": "Internal Voice",
+    "hasScript": "yes",
+    "items" : {
+        "do" : [
+        	"Speak clearly",
+        	"Use indirect language"
+        ],
+        "dont" : [
+        	"Mumble",
+        	"Forget what you are talking about"
+        ]
+    }
+}

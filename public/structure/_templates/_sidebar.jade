@@ -8,5 +8,13 @@ include ../_includes/pagesData
     nav.shop-sidebar__nav.row.clearfix
       ul.shop-list--unstyled
         each page in public.structure.pages._data.items
-          li.shop-sidebar__nav__item
-            a(href="##{page.id}", data-link="#{page.id}").shop-sidebar__nav__item__link.shop-anchor=page.name
+          if !page.subPages
+            li.shop-sidebar__nav__item
+              a(href="##{page.id}", data-link="#{page.id}").shop-sidebar__nav__item__link.shop-anchor=page.name
+          else
+            li.shop-sidebar__nav__item.closed
+              a.shop-sidebar__nav__item__link.shop-anchor=page.name
+              ul.shop-list--unstyled.shop-sublist
+                each subPage in page.subPages
+                  li.shop-sidebar__nav__item
+                    a(href="##{subPage.id}", data-link="#{subPage.id}" data-parent="#{page.name}").shop-sidebar__nav__item__link.shop-anchor=subPage.name

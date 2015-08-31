@@ -6,6 +6,20 @@
             "name": "Introduction"
         },
         {
+            "id" : "tone_and_voice",
+            "name" : "Tone & Voice",
+            "subPages" : [
+                {
+                    "id" : "tone_and_voice-tone",
+                    "name" : "Tone"
+                },
+                {
+                    "id" : "tone_and_voice-voice",
+                    "name" : "Voice"
+                }
+            ]
+        },
+        {
             "id": "typography",
             "name": "Typography"
         }

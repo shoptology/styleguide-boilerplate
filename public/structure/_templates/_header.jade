@@ -6,9 +6,11 @@ html
 			.shop-header__welcome.left
 				span.title 
 				span.subtitle 
-			nav.shop-header__breakpoints.right
-				ul.shop-list--unstyled.shop-list--float
-					each breakpoint in breakpoints
-						li.shop-header__breakpoints__item
-							a(id=breakpoint.id, data-size=breakpoint.size, data-size-label=breakpoint.id).shop-header__breakpoints__item__link
-								span=breakpoint.name
+			if !hideResponsiveMenu
+				nav.shop-header__breakpoints.right
+					img.shop-header__breakpoints.icon(src="../../assets/images/responsive_menu_icon.svg")
+					ul.shop-list--unstyled
+						each breakpoint in breakpoints
+							li.shop-header__breakpoints__item
+								a(id=breakpoint.id, data-size=breakpoint.size, data-size-label=breakpoint.id).shop-header__breakpoints__item__link
+									span=breakpoint.name

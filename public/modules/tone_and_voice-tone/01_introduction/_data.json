@@ -1,0 +1,8 @@
+{
+    "id": "introduction",
+    "name": "Introduction",
+    "hasScript": "yes",
+    "items" : {
+        "introText" : "This section will cover the tone of our brand..."
+    }
+}
