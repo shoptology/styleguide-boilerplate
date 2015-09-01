@@ -1,0 +1,24 @@
+include ../../structure/_includes/modulesData
+//include ../../structure/_includes/stylesData
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    block meta
+    title=public._data.clientName + " Styleguide"
+    link(rel="icon", type="image/png", href="../../structure/images/favicon.png")
+    block styles
+      link(rel="stylesheet", type="text/css", href="/assets/styles/styleguide.css")
+  body
+    main.container
+      block content
+    block scripts
+      script(src="../../structure/scripts/vendor/jquery-1.11.1.min.js")
+      script(src="../../structure/scripts/vendor/prism.js")
+      script(src="../../structure/scripts/vendor/tidy.js")
+      //script(src="../../structure/scripts/iframe.js")
+      each module in modulesData
+        if module.scripts
+          each script in module.scripts
+            - var folder = '../../modules/' + module.order + '_' + module.id + '/'
+            script(src='#{folder}#{script}')

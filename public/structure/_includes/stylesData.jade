@@ -1,0 +1,12 @@
+- var modules = public.modules
+- var stylesData = []
+- for(var folder in modules) {
+- 	for(var sub in modules[folder]) {
+- 		var subFolder = modules[folder][sub];
+- 		subFolder._contents.forEach(function(item) {
+- 			if(item.indexOf('.css') !== -1) {
+-				stylesData.push(folder + '/' + sub + '/' + item); 
+-			}
+-		});
+- 	}
+- }
