@@ -36,14 +36,19 @@ var StyleguideIframe = {
     events: function() {
         var _this = this;
 
-        $(window).scroll(function() {
+        /*$(window).scroll(function() {
             _this.sidebarLinksHighlight();
-        });
+        });*/
 
         $(this.codeSnippetsClass).click(function(e) {
             e.preventDefault();
             _this.codeSnippetsToggle($(this));
             _this.sidebarLinksHighlightSetup();
+        });
+
+        $('.shop-footer-next').on('click', function(e) {
+            console.log('clicked');
+            parent.StyleguideIndex.followLink(e);
         });
 
         $('.shop-subnav-item').on('click', function() {

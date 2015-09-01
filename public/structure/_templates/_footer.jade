@@ -1,4 +1,43 @@
+- var source = current.source;
+- var pages = public.structure.pages._data.items;
+- var target = getNext(pages, source);
+- function getNext(items, id) {
+-	for(var i = 0; i < items.length; i++) {
+-		var item = items[i];
+-		if(item.id == id) {
+-			return getFirst(items[i + 1]);
+-		} else {
+-			if(item.subPages) {
+-				for(var j = 0; j < item.subPages.length; j++) {
+-					var subItem = item.subPages[j];
+-					if(subItem.id == id) {
+-						if(j !== item.subPages.length - 1) {
+-							return { id: item.subPages[j + 1].id, name: item.subPages[j + 1].name }
+-						} else {
+-							return getFirst(items[i + 1]);
+-						}
+-					}
+-				}
+-			}
+-		}
+- 	}
+- }
+- function getFirst(item) {
+- 	if(!item) {
+-		return false
+- 	}
+-	if(item.subPages) {
+-		return { id: item.subPages[0].id, name: item.subPages[0].name }
+-	} else {
+-		return { id: item.id, name: item.name }
+-	}
+- }
+
 .shop-footer
+	if target
+		.shop-footer-next(data-link=target.id)
+			span.bold Next 
+			span.light=target.name
 	p Powered by 
 		a(href="http://goshoptology.com") Shoptology
 		sup TM

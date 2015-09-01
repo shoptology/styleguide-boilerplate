@@ -63,33 +63,7 @@ var StyleguideIndex = {
         });
 
         this.$sidebarLinks.click(function(e) {
-            e.preventDefault();
-            // Reenable to make this move the iframe to different sections
-            //_this.navigateToAnchor($(this));
-
-
-
-            // Set iframe to this page
-            var link = $(e.target).data('link');
-
-            if (!link) {
-                var p = $(e.target).parent();
-                if (p.hasClass('closed')) {
-                    p.removeClass('closed');
-                } else {
-                    p.addClass('closed');
-                }
-            } else {
-                _this.$iframe.attr('src', 'structure/pages/' + link + '.html');
-
-                // Use ! to prevent de default browser behavior of anchor navigation
-                window.location.hash = '!' + link;
-                _this.setHeaderNavName(link);
-
-                //_this.$iframeContent = this.isChromeAndFileProtocol() ? null : $('.shop-iframe-wrapper iframe').contents();
-            }
-
-
+            _this.followLink(e);
         });
 
         this.$sidebarToggle.click(function(e) {
@@ -100,6 +74,32 @@ var StyleguideIndex = {
         $(window).resize(function() {
             _this.sidebarResizeHandler();
         });
+    },
+
+    followLink: function(e) {
+        e.preventDefault();
+        // Reenable to make this move the iframe to different sections
+        //_this.navigateToAnchor($(this));
+
+        // Set iframe to this page
+        var link = $(e.target).data('link');
+
+        if (!link) {
+            var p = $(e.target).parent();
+            if (p.hasClass('closed')) {
+                p.removeClass('closed');
+            } else {
+                p.addClass('closed');
+            }
+        } else {
+            this.$iframe.attr('src', 'structure/pages/' + link + '.html');
+
+            // Use ! to prevent de default browser behavior of anchor navigation
+            window.location.hash = '!' + link;
+            this.setHeaderNavName(link);
+
+            //_this.$iframeContent = this.isChromeAndFileProtocol() ? null : $('.shop-iframe-wrapper iframe').contents();
+        }
     },
 
     /**
