@@ -12,6 +12,7 @@
         text-align: right;
         padding-right: 95px;
         span {
+            pointer-events: none;
             color: white;
             &.bold {
                 font-weight: bold;
